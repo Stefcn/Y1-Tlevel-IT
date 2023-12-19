@@ -88,6 +88,19 @@ def house_sale():
     print (houses[select -1])
     del houses[select -1] 
 
+def add_house():
+    houseregion = input("please enter a region")
+    housetype = input("please enter a house type")
+    housebedrooms = input("please enter how many bedrooms")
+    houseprice = input("please enter the price of the house")
+    Newhousedata = []
+    Newhousedata.append (houseregion)
+    Newhousedata.append (housetype)
+    Newhousedata.append (housebedrooms)
+    Newhousedata.append (houseprice)
+    houses.append (Newhousedata)    
+
+
 
 while True:
     menuselection = int(input(" WELCOME TO THE NEWHAVEN DASHBOARD \n\n Please select from the following menu options \n\n"
@@ -102,7 +115,7 @@ while True:
     elif menuselection ==3:
         house_sale()
     elif menuselection==4:
-        show_sales()
+        add_house()
     elif menuselection==5:
         show_sales()
     elif menuselection==6:
